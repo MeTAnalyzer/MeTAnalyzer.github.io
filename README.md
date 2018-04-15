@@ -1,2 +1,2 @@
 # MeTAnalyzer.github.io
-site
+MeTAnalyzer landing page.
