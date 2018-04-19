@@ -12,8 +12,9 @@
   <style>
     body {
       font: 20px Montserrat, sans-serif;
-      line-height: 1.8;
-      color: #f5f6f7;
+      line-height: 2;
+      color: #dadada;
+      text-align: center;
     }
 
     p {
@@ -25,27 +26,33 @@
     }
 
     .bg-1 {
-      background-color: #9999ff;
-      /* lt blue */
+      background-color: #7272cf;
       color: #ffffff;
+    }
+
+    .bg-1>*>a {
+      color: #c6c6dd;
     }
 
     .bg-2 {
       background-color: #474e5d;
-      /* Dark Blue */
       color: #ffffff;
     }
 
+
+
     .bg-3 {
       background-color: #ffffff;
-      /* White */
       color: #555555;
     }
 
     .bg-4 {
       background-color: #2f2f2f;
-      /* Black Gray */
       color: #fff;
+    }
+
+    .bg-header {
+      background-color: #1d1919;
     }
 
     .container-fluid {
@@ -82,12 +89,72 @@
     .segment-header {
       padding: 4rem;
     }
+
+
+    .header-image {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .case-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      background-color: rgba(50, 50, 255, .5);
+      color: rgba(30, 30, 88, 1);
+
+    }
+
+    .case-study,
+    .case-video {
+      width: 100%;
+      border: 5px solid rgba(20, 30, 88, .3);
+      background: rgba(255, 255, 255, .4);
+      height: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .case-study:hover,
+    .case-video:hover {
+      text-decoration: underline;
+      background-color: rgba(50, 50, 255, .4);
+    }
+
+
+    .case-study>*>*,
+    .case-video>*>* {
+      padding-top: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+
+    .case-study>a,
+    .case-video>a {
+      color: rgba(20, 30, 88, .65);
+    }
+
+    .case-study>a:hover,
+    .case-video>a:hover {
+      color: rgba(255, 255, 255, .7);
+
+    }
+
+    footer {
+      min-height: 10vh;
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- Navbar -->
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
@@ -118,65 +185,65 @@
   </nav>
 
   <!-- First Container -->
-  <img src="img/turnstile.jpg" class="img-responsive hero-image">
+  <div class="container-image turnstile bg-header">
+    <img src="img/turnstile.jpg" class="header-image">
+  </div>
   <div class="container-fluid bg-1 text-center" id="anchor-intro">
-
-    <h3 class="segment-header margin">What is MeTAnalyzer?</h3>
-
-    <h3>MeTAnalyzer is a full stack application that analyzes realtime social media data using the IBM Watson platform and formats
+    <h2 class="segment-header margin">What is MeTAnalyzer?</h2>
+    <p>MeTAnalyzer is a full stack application that analyzes realtime social media data using the IBM Watson platform and formats
       the results for use by the public (via the MeTAnalyzer mobile app) as well as city officials (via the MeTAnalyzer data
-      analytics dashboard). This project was produced by Team 29 for the 2018 CUNY IBM Watson Competition, which tasked CUNY
-      students with coming up with ideas for novel uses for the IBM Watson platform to improve the lives of New Yorkers.</h3>
+      analytics dashboard). This project was produced by Team 29 for the
+      <a href="https://blogs.baruch.cuny.edu/ibmwatson/">2018 CUNY IBM Watson Competition</a>, which tasked CUNY students with coming up with ideas for novel uses for the IBM
+      Watson platform to improve the lives of New Yorkers.</p>
   </div>
 
   <!-- Second Container -->
   <div class="container-fluid bg-2 text-center" id="anchor-problem">
-    <h3 class="segment-header margin">The Problem</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    <h2 class="segment-header margin">The Problem</h2>
+    <p>For over a century, public transit has been the predominant mode of transportation for low and middle income New Yorkers.
+      Ridership levels are have increased significantly, yet the quality of MTA service has entered a significant decline.
+      Frustrated commuters are increasingly leaving New York for other cities, often directly citing the deteriorating public
+      transit situation and unpredictable commutes as the reason for their departure. </p>
+    <p>If this trend continues, the urban renewal New York has enjoyed for most of the last decade is likely to halt or perhaps
+      even reverse trajectory. </p>
   </div>
 
-  <!-- Third Container (Grid) -->
+  <!-- Third Container  -->
   <div class="container-fluid bg-3 text-center" id="anchor-solution">
-    <h3 class="segment-header margin">The Solution</h3>
-    <div class="row">
-      <div class="col-sm-4">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua.
-        </p>
-        <!-- <img src=" " class="img-responsive margin"> -->
-      </div>
-      <div class="col-sm-4">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua.
-        </p>
-        <!-- <img src=" " class="img-responsive margin" > -->
-      </div>
-      <div class="col-sm-4">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua.
-        </p>
+    <h2 class="segment-header margin">The Solution</h2>
+    <p>
+      MTA related content, photos, and metadata from social media can be aggregated and analyzed via a combination of image recognition,
+      sentiment analysis, and other NLP/machine learning technologies available via the IBM Watson API; insights gained will
+      be used to optimize the detection, prevention, and communication of emergent transit problems in real time.
+    </p>
+  </div>
+
+  </div>
+  <div class="container-fluid case-container">
+    <div class="case-study">
+      <a href="metanalyzer.github.io/files/case_study.pdf">
+        <p>Read the case study here.</p>
+      </a>
+    </div>
+    <div class="case-video">
+      <a href="https://youtu.be/JaRJ6RVnAp0">
+        <p>Watch the product trailer here.</p>
+      </a>
+    </div>
+  </div>
+  <div class="container-fluid bg-1 text-center " id="anchor-team">
+    <h2 class="segment-header margin ">The Team</h2>
+    <div class="team-roster ">
+      <div>
+        <p>Cassandra Newcomer</p>
+        <p>Karishma Muni</p>
+        <p>Saranjeet Bhamra</p>
       </div>
     </div>
   </div>
-
-  <!-- Fourth Container -->
-  <div class="container-fluid bg-1 text-center" id="anchor-team">
-    <h3 class="segment-header margin">The Team</h3>
-    <h3 class="team-roster">
-      <div>
-        <p>Cassandra</p>
-        <p>Karishma</p>
-        <p>Saranjeet</p>
-      </div>
-  </div>
-
-
   <!-- Footer -->
-  <footer class="container-fluid bg-4 text-center">
-    <p> </p>
+  <footer class="bg-4 text-center ">
   </footer>
-
 </body>
 
 </html>
