@@ -1,2 +1,2 @@
 # MeTAnalyzer.github.io
-MeTAnalyzer <a href="metanalyzer.github.io">landing page</a>.
+MeTAnalyzer <a href="https://metanalyzer.github.io/">landing page</a>.
