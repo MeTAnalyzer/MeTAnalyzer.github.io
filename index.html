@@ -98,6 +98,7 @@
 
     .case-container {
       display: flex;
+	  flex-direction:column;
       align-items: center;
       justify-content: center;
       margin: 0;
@@ -106,27 +107,28 @@
 
     }
 
-    .case-study,
-    .case-video {
-      width: 100%;
+    .case-study 
+	{
+      width: 60%;
       border: 5px solid rgba(20, 30, 88, .3);
       background: rgba(255, 255, 255, .4);
       height: 100%;
       margin: 0;
+	  margin-top:4rem;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .case-study:hover,
-    .case-video:hover {
+    .case-study:hover
+	 
+	{
       text-decoration: underline;
       background-color: rgba(50, 50, 255, .4);
     }
 
 
-    .case-study>*>*,
-    .case-video>*>* {
+    .case-study>*>* {
       padding-top: 5px;
       display: flex;
       align-items: center;
@@ -213,21 +215,19 @@
     <h2 class="segment-header margin">The Solution</h2>
     <p>
       MTA related content, photos, and metadata from social media can be aggregated and analyzed via a combination of image recognition,
-      sentiment analysis, and other NLP/machine learning technologies available via the IBM Watson API; insights gained will
+      sentiment analysis, and other NLP/machine learning technologies available via the IBM Watson platform. Insights gained will
       be used to optimize the detection, prevention, and communication of emergent transit problems in real time.
     </p>
   </div>
 
   </div>
   <div class="container-fluid case-container">
+      <div class="case-video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/GkNDX1OJvXs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
     <div class="case-study">
       <a href="files/case_study.pdf">
         <p>Read the case study here.</p>
-      </a>
-    </div>
-    <div class="case-video">
-      <a href="https://youtu.be/JaRJ6RVnAp0">
-        <p>Watch the product trailer here.</p>
       </a>
     </div>
   </div>
